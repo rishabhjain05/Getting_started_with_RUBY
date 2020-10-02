@@ -56,3 +56,53 @@ sol = num1.to_f + num2.to_f
 puts sol
 
 #**Note:- In this case user can add two numbers and can also tackle decimals.
+
+# More simplified way to solve the above problem/challanges
+# **********************************************************
+puts "Enter the first number"
+num1 = gets.chomp().to_f
+puts "Enter the second number"
+num2 = gets.chomp().to_f
+sol = num1 + num2
+puts sol
+
+#===================================#
+# Building a fill in the blank game #
+#===================================#
+
+puts "Enter your favourite color"
+color = gets.chomp().to_s
+puts "Enter you nick name"
+nname = gets.chomp().to_s
+puts "Enter your lucky number"
+lnumber = gets.chomp().to_s
+
+puts "Hello Friends, myself " + nname + "."
+puts "I want to tell you my favourite colour is " + color + "."
+puts "And my favourite number is " + lnumber + "."
+
+#====================================================#
+# Starting with Array                                #
+# Array = Container/Variable holding multiple values #
+# Array.new, .length()                               #
+#====================================================#
+
+# Playing with defined Arrays
+# ***************************
+fruits = ["Orange", "Peach", "Water Melon", "Melon", "Apple"]
+puts fruits
+puts fruits[0]
+puts fruits[0,2]      # output = Orange, Peach
+puts fruits[0] = "Pineapple"
+puts fruits[-1]
+
+random = [1, 2, "Hello", "@", "Naruto", false]
+puts random
+
+# Playing with undefined Arrays
+# ******************************
+hello = Array.new
+hello[1] = "World"
+hello[5] = "Hi"
+puts hello
+puts hello.length()    # Will tell, users about the length of the array.
