@@ -3,8 +3,9 @@
 # Creted different sections for different commands, uncomment them to see them running.
 #=======================================================================================
 
-## Difference between "prints" and "puts" command
-#=================================================
+#==================================================#
+## Difference between "prints" and "puts" command. #
+#==================================================#
 
 ## Prints command print all the things in same line
 print("Hello world")
@@ -16,8 +17,10 @@ puts "Hello Rishabh"
 puts "Not a syntax error"
 #*Note:- puts commad print each output on new line.
 
-## Printing shapes in ruby using puts command.
-#=============================================
+#==============================================#
+## Printing shapes in ruby using puts command. #
+#==============================================#
+
 puts "-----------------------------"
 puts "|  My name is Rishabh Jain  |"
 puts "|                           |"
@@ -26,10 +29,12 @@ puts "|                           |"
 puts "|                           |"
 puts "-----------------------------"
 
-## Jumping to variables.
-# variables are used to keep track on all the data that is used in code for multiple times.
-# We can change the value of variables in between of code.
-#==========================================================================================================
+#============================================================================================#
+## Jumping to variables.                                                                     #
+# variables are used to keep track on all the data that is used in code for multiple times.  #
+# We can change the value of variables in between of code.                                   #
+#============================================================================================#
+
 character_name = "Rishabh Jain"
 character_sports = "Football"
 character_age = "22" # can't use syntax => character_age = 22 i.e. 22 without quotes cause, we will be using age in string.
@@ -37,8 +42,9 @@ puts "My name is " + character_name + ". I like to play " + character_sports + "
 character_name = "Sambhav"
 puts character_name + " is the class topper."
 
-## Data Types in ruby
-#=====================
+#======================#
+## Data Types in ruby  #
+#======================#
 
 Name = "Rishabh" # string
 Age = "22"       # string
@@ -48,8 +54,9 @@ istall = true    # boolean
 ischubby = false # boolean
 flaws = nil      # nil
 
-## Playing with strings
-#=======================
+#=======================#
+## Playing with strings #
+#=======================#
 
 puts "hello\nworld"               # use \n for breaking the line, when using puts command.
 puts "hello \:-) world"           # use \ to enter the custom text, symbol anything between the puts commad.
@@ -73,20 +80,24 @@ puts "hello".upcase()
 puts "hello".downcase()
 puts "hello".length()
 
-## Indexing of the strings
-# spaces also include in index
-# .index tag will provide the index of searched character
-#==========================================================
+#==========================================================#
+## Indexing of the strings                                 #
+# spaces also include in index                             #
+# .index tag will provide the index of searched character  #
+#===========================================================
+
 phrase = "This world is so beautiful"
 puts phrase[0]
 puts phrase[4]
 puts phrase[8]
 puts phrase[0,3]             # 's' in 'This' will be excluded when using index[0,3]
-puts phrase.index"w"         # To get the index of a particular element.
 
-## Basic operation on numbers and related tags
-# .to_s, .abs(), .round(), .ceil(), Math.sqrt()
-#==============================================
+puts phrase.index"w"         # .index is used to search the index number of a given element
+
+#=====================================================================#
+## Basic operation on numbers and related tags                        #
+# .to_s, .abs(), .round(), .ceil(), Math.sqrt(), Math.log(), .chomp() #
+#=====================================================================#
 puts 2+5
 puts 9*6
 puts 8/2
@@ -97,9 +108,9 @@ puts 2**3
 # ************************************
 # ==> Print the num taken as integer with the string of your choice
 num = 5
-puts "my favourite number is " + num        # This syntax will throw error cause string can, indent with string only not with the integer.
+puts "my favourite number is " + num      # This syntax will throw error cause string can, indent with string only not with the integer.
 ## solution
-puts "my favourite number is " + num.to_s   # Change the interger to string format, to indent with the string of your choice.
+puts "my favourite number is " + num.to_s # Change the interger to string format, to indent with the string of your choice.
 
 # Find the absolute value
 # ***********************
@@ -125,9 +136,31 @@ puts num.floor()
 # **********************************
 puts Math.sqrt(36)
 
+# Finding the log for a given number
+# **********************************
+puts Math.log(36)
+
+
 ## Working on User Input
 # .chomp()
 # ***********************
 puts("Enter your name")
 name = gets
-puts ("Welcome to the band " + name + ".")
+puts ("Welcome to the band " + name + ". We are happy to have you!")
+
+#*Note:- When we are using a gets operation, it will be shifting all the content
+# after user input to the new line and above code output will look like this.
+
+# output will look like this=>
+# Welcome to the band rishabh
+# . We are happy to have you!
+
+#=================================================================# 
+#*Note:- To avoid this multiline output we use .chomp() function. #
+#=================================================================#
+puts("Enter your name")
+name = gets.chomp()
+puts ("Welcome to the band " + name + ". We are happy to have you!")
+
+# Now the output of above code with .chomp() function look like this:-
+# Welcome to the band rishabh. We are happy to have you!
